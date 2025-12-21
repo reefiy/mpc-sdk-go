@@ -1,7 +1,7 @@
 package mpcsdk
 
 // Version is the current version of the MPC SDK
-const Version = "1.0.1"
+const Version = "1.0.2"
 
 // GetVersion returns the SDK version
 func GetVersion() string {
