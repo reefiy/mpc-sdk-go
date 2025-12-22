@@ -8,14 +8,14 @@ type Config struct {
 // Sandbox returns configuration for the sandbox environment
 func Sandbox() *Config {
 	return &Config{
-		BaseURL: "http://localhost:8089",
+		BaseURL: "https://mpcgwapi-sandbox.reefiy.dev",
 	}
 }
 
 // Production returns configuration for the production environment
 func Production() *Config {
 	return &Config{
-		BaseURL: "https://mpc-gateway.reefiy.com",
+		BaseURL: "https://mpcgwapi.reefiy.com",
 	}
 }
 
