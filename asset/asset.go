@@ -20,15 +20,8 @@ func NewService(client *common.Client) *Service {
 
 // CreateAssetRequest represents a request to add a new asset
 type CreateAssetRequest struct {
-	WalletID        string `json:"wallet_id"`
-	AccountID       string `json:"account_id"`
-	Chain           string `json:"chain"`
-	Network         string `json:"network"`
-	Symbol          string `json:"symbol"`
-	Name            string `json:"name"`
-	AssetType       string `json:"asset_type"`                 // NATIVE, ERC20, TRC20, etc.
-	ContractAddress string `json:"contract_address,omitempty"` // For tokens
-	Decimals        int    `json:"decimals"`
+	AccountID string `json:"account_id"`
+	Symbol    string `json:"symbol"`
 }
 
 // Asset represents an asset (token) in an account

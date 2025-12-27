@@ -43,8 +43,6 @@ func TestWalletCreate(t *testing.T) {
 	req := &wallet.CreateWalletRequest{
 		WalletName:  "Test Wallet",
 		Description: "Integration test wallet",
-		Chain:       "ETH",
-		Network:     "mainnet",
 	}
 
 	w, err := client.Wallet.Create(ctx, req)
@@ -70,8 +68,6 @@ func TestWalletGet(t *testing.T) {
 	// First create a wallet
 	createReq := &wallet.CreateWalletRequest{
 		WalletName: "Test Get Wallet",
-		Chain:      "ETH",
-		Network:    "mainnet",
 	}
 
 	created, err := client.Wallet.Create(ctx, createReq)
@@ -123,25 +119,12 @@ func TestAccountCreate(t *testing.T) {
 	client := getTestClient(t)
 	ctx := context.Background()
 
-	// First create a wallet
-	walletReq := &wallet.CreateWalletRequest{
-		WalletName: "Test Account Wallet",
-		Chain:      "ETH",
-		Network:    "mainnet",
-	}
-
-	w, err := client.Wallet.Create(ctx, walletReq)
-	if err != nil {
-		t.Fatalf("Failed to create wallet: %v", err)
-	}
-
 	// Create account
 	accountReq := &account.CreateAccountRequest{
-		WalletID:    w.WalletID,
-		Chain:       "ethereum",
-		Network:     "mainnet",
-		Label:       "Test Account",
-		AccountType: "EOA",
+		WalletID: "wallet_id-01JG1YJ4M5J91K0J91K0J91K0J91K0J91",
+		Chain:    "ethereum",
+		Network:  "testnet",
+		Label:    "Test Account",
 	}
 
 	a, err := client.Account.Create(ctx, accountReq)
@@ -258,37 +241,10 @@ func TestAssetCreate(t *testing.T) {
 	client := getTestClient(t)
 	ctx := context.Background()
 
-	// Create wallet and account
-	w, err := client.Wallet.Create(ctx, &wallet.CreateWalletRequest{
-		WalletName: "Test Asset Wallet",
-		Chain:      "ETH",
-		Network:    "mainnet",
-	})
-	if err != nil {
-		t.Fatalf("Failed to create wallet: %v", err)
-	}
-
-	a, err := client.Account.Create(ctx, &account.CreateAccountRequest{
-		WalletID: w.WalletID,
-		Chain:    "ethereum",
-		Network:  "mainnet",
-		Label:    "Test Account",
-	})
-	if err != nil {
-		t.Fatalf("Failed to create account: %v", err)
-	}
-
 	// Create asset
 	assetReq := &asset.CreateAssetRequest{
-		WalletID:        w.WalletID,
-		AccountID:       a.AccountID,
-		Chain:           "ETH",
-		Network:         "mainnet",
-		Symbol:          "USDC",
-		Name:            "USD Coin",
-		AssetType:       "ERC20",
-		ContractAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-		Decimals:        6,
+		AccountID: "account_id-01JG1YJ4M5J91K0J91K0J91K0J91K0J91",
+		Symbol:    "USDC",
 	}
 
 	createdAsset, err := client.Asset.Create(ctx, assetReq)
@@ -311,36 +267,9 @@ func TestAssetGet(t *testing.T) {
 	client := getTestClient(t)
 	ctx := context.Background()
 
-	// Create wallet, account and asset
-	w, err := client.Wallet.Create(ctx, &wallet.CreateWalletRequest{
-		WalletName: "Test Asset Get Wallet",
-		Chain:      "ETH",
-		Network:    "mainnet",
-	})
-	if err != nil {
-		t.Fatalf("Failed to create wallet: %v", err)
-	}
-
-	a, err := client.Account.Create(ctx, &account.CreateAccountRequest{
-		WalletID: w.WalletID,
-		Chain:    "ethereum",
-		Network:  "mainnet",
-		Label:    "Test Account",
-	})
-	if err != nil {
-		t.Fatalf("Failed to create account: %v", err)
-	}
-
 	created, err := client.Asset.Create(ctx, &asset.CreateAssetRequest{
-		WalletID:        w.WalletID,
-		AccountID:       a.AccountID,
-		Chain:           "ETH",
-		Network:         "mainnet",
-		Symbol:          "USDT",
-		Name:            "Tether USD",
-		AssetType:       "ERC20",
-		ContractAddress: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-		Decimals:        6,
+		AccountID: "account_id-01JG1YJ4M5J91K0J91K0J91K0J91K0J91",
+		Symbol:    "USDT",
 	})
 	if err != nil {
 		t.Fatalf("Failed to create asset: %v", err)
@@ -370,7 +299,7 @@ func TestAssetList(t *testing.T) {
 	// Create wallet and account
 	w, err := client.Wallet.Create(ctx, &wallet.CreateWalletRequest{
 		WalletName: "Test Asset List Wallet",
-		Chain:      "ETH",
+		Chain:      "ethereum",
 		Network:    "mainnet",
 	})
 	if err != nil {
@@ -400,15 +329,8 @@ func TestAssetList(t *testing.T) {
 
 	for _, token := range tokens {
 		_, err := client.Asset.Create(ctx, &asset.CreateAssetRequest{
-			WalletID:        w.WalletID,
-			AccountID:       a.AccountID,
-			Chain:           "ETH",
-			Network:         "mainnet",
-			Symbol:          token.Symbol,
-			Name:            token.Name,
-			AssetType:       "ERC20",
-			ContractAddress: token.Contract,
-			Decimals:        18,
+			AccountID: a.AccountID,
+			Symbol:    token.Symbol,
 		})
 		if err != nil {
 			t.Fatalf("Failed to create asset %s: %v", token.Symbol, err)
