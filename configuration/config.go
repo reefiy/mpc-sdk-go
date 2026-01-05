@@ -8,14 +8,14 @@ type Config struct {
 // Sandbox returns configuration for the sandbox environment
 func Sandbox() *Config {
 	return &Config{
-		BaseURL: "https://mpcgwapi-sandbox.reefiy.dev",
+		BaseURL: "https://api-sandbox.paratro.com",
 	}
 }
 
 // Production returns configuration for the production environment
 func Production() *Config {
 	return &Config{
-		BaseURL: "https://mpcgwapi.reefiy.com",
+		BaseURL: "https://api.paratro.com",
 	}
 }
 
