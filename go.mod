@@ -1,3 +1,3 @@
-module github.com/reefiy/mpc-sdk-go
+module github.com/paratro/paratro-sdk-go
 
 go 1.21

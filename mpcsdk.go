@@ -3,13 +3,13 @@ package mpcsdk
 import (
 	"fmt"
 
-	"github.com/reefiy/mpc-sdk-go/account"
-	"github.com/reefiy/mpc-sdk-go/asset"
-	"github.com/reefiy/mpc-sdk-go/auth"
-	"github.com/reefiy/mpc-sdk-go/common"
-	"github.com/reefiy/mpc-sdk-go/configuration"
-	"github.com/reefiy/mpc-sdk-go/transaction"
-	"github.com/reefiy/mpc-sdk-go/wallet"
+	"github.com/paratro/paratro-sdk-go/account"
+	"github.com/paratro/paratro-sdk-go/asset"
+	"github.com/paratro/paratro-sdk-go/auth"
+	"github.com/paratro/paratro-sdk-go/common"
+	"github.com/paratro/paratro-sdk-go/configuration"
+	"github.com/paratro/paratro-sdk-go/transaction"
+	"github.com/paratro/paratro-sdk-go/wallet"
 )
 
 // Client is the main MPC SDK client

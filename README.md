@@ -1,10 +1,10 @@
-# Reefiy MPC Wallet Gateway Go SDK
+# Paratro MPC Wallet Gateway Go SDK
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/reefiy/mpc-sdk-go.svg)](https://pkg.go.dev/github.com/reefiy/mpc-sdk-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/reefiy/mpc-sdk-go)](https://goreportcard.com/report/github.com/reefiy/mpc-sdk-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/paratro/paratro-sdk-go.svg)](https://pkg.go.dev/github.com/paratro/paratro-sdk-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/paratro/paratro-sdk-go)](https://goreportcard.com/report/github.com/paratro/paratro-sdk-go)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official Go SDK for Reefiy MPC Wallet Gateway - A comprehensive Multi-Party Computation wallet management platform.
+Official Go SDK for Paratro MPC Wallet Gateway - A comprehensive Multi-Party Computation wallet management platform.
 
 ## Features
 
@@ -20,7 +20,7 @@ Official Go SDK for Reefiy MPC Wallet Gateway - A comprehensive Multi-Party Comp
 ## Installation
 
 ```bash
-go get github.com/reefiy/mpc-sdk-go@latest
+go get github.com/paratro/paratro-sdk-go@latest
 ```
 
 **Requirements**: Go 1.19 or higher
@@ -36,9 +36,9 @@ import (
     "context"
     "log"
 
-    mpcsdk "github.com/reefiy/mpc-sdk-go"
-    "github.com/reefiy/mpc-sdk-go/configuration"
-    "github.com/reefiy/mpc-sdk-go/wallet"
+    mpcsdk "github.com/paratro/paratro-sdk-go"
+    "github.com/paratro/paratro-sdk-go/configuration"
+    "github.com/paratro/paratro-sdk-go/wallet"
 )
 
 func main() {
@@ -318,9 +318,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Support
 
-* 📧 Email: support@reefiy.com
-* 📚 Documentation: https://docs.reefiy.com
-* 🐛 Issues: https://github.com/reefiy/mpc-sdk-go/issues
+* 📧 Email: support@paratro.com
+* 📚 Documentation: https://docs.paratro.com
+* 🐛 Issues: https://github.com/paratro/paratro-sdk-go/issues
 
 ## License
 
@@ -341,4 +341,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ---
 
-Made with ❤️ by Reefiy
+Made with ❤️ by Paratro

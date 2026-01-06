@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/reefiy/mpc-sdk-go/auth"
+	"github.com/paratro/paratro-sdk-go/auth"
 )
 
 // Client is the HTTP client for making API requests

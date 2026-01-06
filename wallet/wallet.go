@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/reefiy/mpc-sdk-go/common"
+	"github.com/paratro/paratro-sdk-go/common"
 )
 
 // Service handles wallet-related API operations

@@ -68,7 +68,7 @@ jobs:
 
             ### Installation
             ```bash
-            go get github.com/reefiy/mpc-sdk-go@${{ steps.get_version.outputs.VERSION }}
+            go get github.com/paratro/paratro-sdk-go@${{ steps.get_version.outputs.VERSION }}
             ```
 
             ### Branches
@@ -76,7 +76,7 @@ jobs:
             - Tag: `${{ steps.get_version.outputs.VERSION }}`
 
             ### Documentation
-            See [README.md](https://github.com/reefiy/mpc-sdk-go/blob/main/README.md) for usage instructions.
+            See [README.md](https://github.com/paratro/paratro-sdk-go/blob/main/README.md) for usage instructions.
           draft: false
           prerelease: false
 

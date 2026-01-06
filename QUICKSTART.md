@@ -1,11 +1,11 @@
 # Quick Start Guide
 
-This guide will help you get started with the Reefiy MPC Wallet Gateway Go SDK in minutes.
+This guide will help you get started with the Paratro MPC Wallet Gateway Go SDK in minutes.
 
 ## Installation
 
 ```bash
-go get github.com/reefiy/mpc-sdk-go@latest
+go get github.com/paratro/paratro-sdk-go@latest
 ```
 
 ## Basic Setup
@@ -17,9 +17,9 @@ import (
     "context"
     "log"
     
-    mpcsdk "github.com/reefiy/mpc-sdk-go"
-    "github.com/reefiy/mpc-sdk-go/configuration"
-    "github.com/reefiy/mpc-sdk-go/wallet"
+    mpcsdk "github.com/paratro/paratro-sdk-go"
+    "github.com/paratro/paratro-sdk-go/configuration"
+    "github.com/paratro/paratro-sdk-go/wallet"
 )
 
 func main() {
@@ -101,7 +101,7 @@ export MPC_CLIENT_SECRET="your-client-secret"
 
 ## Support
 
-- 📧 Email: support@reefiy.com
-- 📚 Documentation: https://docs.reefiy.com
-- 🐛 Issues: https://github.com/reefiy/mpc-sdk-go/issues
+- 📧 Email: support@paratro.com
+- 📚 Documentation: https://docs.paratro.com
+- 🐛 Issues: https://github.com/paratro/paratro-sdk-go/issues
 

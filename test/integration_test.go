@@ -6,12 +6,12 @@ import (
 	"os"
 	"testing"
 
-	mpcsdk "github.com/reefiy/mpc-sdk-go"
-	"github.com/reefiy/mpc-sdk-go/account"
-	"github.com/reefiy/mpc-sdk-go/asset"
-	"github.com/reefiy/mpc-sdk-go/configuration"
-	"github.com/reefiy/mpc-sdk-go/transaction"
-	"github.com/reefiy/mpc-sdk-go/wallet"
+	mpcsdk "github.com/paratro/paratro-sdk-go"
+	"github.com/paratro/paratro-sdk-go/account"
+	"github.com/paratro/paratro-sdk-go/asset"
+	"github.com/paratro/paratro-sdk-go/configuration"
+	"github.com/paratro/paratro-sdk-go/transaction"
+	"github.com/paratro/paratro-sdk-go/wallet"
 )
 
 func getTestClient(t *testing.T) *mpcsdk.Client {
